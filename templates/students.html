@@ -1,6 +1,7 @@
 <p>students here</p>
 
 <div class="container">
+    <button data-toggle="modal" data-target="#myModali">Insert</button>
     <!--<ul>-->
         <!--<li ng-repeat="student in students">{{student.snm}}</li>-->
     <!--</ul>-->
@@ -13,7 +14,7 @@
             <td><button ng-click="updClick(student.sid)" data-toggle="modal" data-target="#myModal">Update</button></td>
             <td><button ng-click="delClick(student.sid)">Delete</button></td>
         </tr>
-        
+
     </table>
     <!-- The Modal -->
     <div class="modal fade" id="myModal">
@@ -34,6 +35,35 @@
                         <input type="text" value="{{studData.nm}}" ng-model="stud.nm"><br>
                         <input type="text" value="{{studData.ad}}" ng-model="stud.ad"><br>
                         <button ng-click="updData()">Update</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModali">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Heading</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    Modal body..
+                    <form>
+                        <input type="text"  ng-model="stud.id"><br>
+                        <input type="text"  ng-model="stud.nm"><br>
+                        <input type="text"  ng-model="stud.ad"><br>
+                        <button ng-click="insData()">Update</button>
                     </form>
                 </div>
 

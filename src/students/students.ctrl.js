@@ -26,6 +26,17 @@ angular.module('students')
             console.log(msg)
         })
     }
+    $scope.insData=function () {
+        var data={
+            id:$scope.stud.id,
+            nm:$scope.stud.nm,
+            ad:$scope.stud.ad
+        }
+        studentsvc.insStud(data).then(function (msg) {
+            console.log(msg)
+        })
+
+    }
     $scope.stud={
         id:'',
         nm:'',

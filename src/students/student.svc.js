@@ -28,4 +28,9 @@ angular.module('students')
             return response.data
         })
     }
+    this.insStud=function (data) {
+        return $http.post('http://localhost/angularapi/insert_stud.php',data).then(function (response) {
+            return response.data
+        })
+    }
 })
